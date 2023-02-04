@@ -14,6 +14,7 @@ int main(){
     
     
 char ch;
+int current_n=0;
     while (1) {
  
         if ( kbhit() ) {
@@ -21,6 +22,44 @@ char ch;
             // Stores the pressed key in ch
             ch = getch();
  printf("\nKey pressed= %c ", ch) ;
+ 
+ 
+ 
+       
+        	 
+        	 
+        	 if(ch=s){
+        	 	if(current_n=str[4]){
+				  printf("premie element de tablau est %s. \n", str[0]);
+				 }
+				 printf("")
+				 
+				 
+        
+			 }
+        	
+        	
+        	
+        	
+        	
+		}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
            	
            return 0;
        }
