@@ -1,57 +1,60 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <math.h>
+#include<conio.h>
+#include<time.h>
+
 int main(){
 
-  int x=0, y=0;
-  float vitesse=0,heading=0;
- // printf("les parametre de lavion sont: x= %d, y= %d, %f km/h, %f \n", x, y,vitesse,heading);
-  printf("les parametre de lavion sont: x= %d, y= %d, %f km/h\n", x, y,vitesse);
-  printf("Current speed is : %d km/h \n",vitesse);
+
+  int x = 0, y = 0;
+  float vitesse = 0, heading = 0;
+  clock_t begin = clock();
+  float rayon, distance;
   char c;
+   printf("les parametre de lavion sont: (%d, %d, %f, %f)\n", x, y, vitesse, heading);
 
-  while(1){
+  while (1){
+  
 
-   // printf("Current speed is : %d km/h \n",vitesse);
-   // printf("(a)accelere,(b)reiner : \n");
     printf("a(b)frain \n");
-      
-   c=getchar();
 
-   switch (c){
+    c = getch();
+
+    switch (c){
+    
 
     case 'a':
-        vitesse += 10;
-        // x =0;
-         y += 1;
-        break;
+      vitesse += 10;
 
-        case 'b':
-        vitesse -= 10;
-       // x =0;
-        y -=1;
-        if(vitesse<0){
-          vitesse=0;
-        }
-       // if(y = 0){
-            
-           // y = 0;
-       // }
+      break;
 
-        break;  
+    case 'b':
+      vitesse -= 10;
 
-         case 'd' :
-         x += 1;
-      //   y =0;
-         break ;
+      if (vitesse < 0){
+      
+        vitesse = 0;
+      }
 
-         case 'q':
-         x -= 1;
-       //  y = 0;
-         
-   }
-   // printf("les parametre de lavion sont: (%d, %d, %f, %f)\n", x, y,vitesse,heading);
-    printf("les parametre de lavion sont: x= %d, y= %d, %f km/h \n", x, y,vitesse);
+      break;
 
+    case 'd':
+      heading += 45;
+
+      break;
+
+    case 'q':
+      heading -= 45;
+    }
+    clock_t end = clock();
+    unsigned long duree = (end -  begin)/ CLOCKS_PER_SEC;
+    printf("durre=%d",duree);
+    rayon = vitesse * duree;
+
+    x = x+(rayon * cos(heading*M_PI/180.0));
+    y = y+(rayon * sin(heading*M_PI/180.0));
+    printf("les parametre de lavion sont: (%d, %d, %f, %f)\n", x, y, vitesse, heading);
   }
-
+ 
   return 0;
 }
