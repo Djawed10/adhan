@@ -1,0 +1,4 @@
+num nom age note
+1 ali 30 20
+2 djawed 20 18
+3 mouhamed 20 20
