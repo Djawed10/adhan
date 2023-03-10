@@ -28,11 +28,8 @@ char nom[100],a[100],b[100],c[100];
 
 int num,age,note;
 
-fscanf(ptr,"%d %s %s %s\n",num,nom,b,c);
-printf("%d\n",num);
-printf("%s\n",nom);
-printf("%s\n",b);
-printf("%s\n",c);
+fscanf(ptr,"%d %s %d %d\n",&num,nom,&age,&note);
+printf("--> %d %s %d %d\n",num,nom,age,note);
 
  
     return 0;
