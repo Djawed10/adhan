@@ -57,10 +57,12 @@ int main()
     fscanf(ptr, "%s %s %s\n", buf1, buf2, buf3);
     printf("%s %s %s\n", buf1, buf1, buf3);
 
-    char code_bare[100];
     char code_bare2[100];
+
     char nom_de_produit[100];
+    char code_bare[100];
     float prix;
+
     while (1)
     {
         printf(" donner le code bare de produit : ");

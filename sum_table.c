@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include <math.h>
-int main()
+ int main()
 {
    const int count = 0;
     int somme, i;
@@ -40,4 +40,6 @@ int main()
 
     return 0;
 }
+
+
 
