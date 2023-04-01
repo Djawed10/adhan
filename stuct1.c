@@ -46,19 +46,23 @@ int main()
         printf(" donner le code barre de produit : ");
         scanf("%s", &code_barre2);
 
-        for ( i = 0; i < produit_count; i++)
+        for (i = 0; i < produit_count; i++)
         {
 
-            if (strcmp(code_barre2, produites[i].code_barre) == 0)
+            char *htr = strstr(produites[i].code_barre, code_barre2);
+            if (htr != NULL)
             {
-                printf("ce produit est %s est sont prix est %.2f DA\n", nom_de_produit, prix);
+                printf("la sous chain : %s a ete trouver dans la chain : %s , donc :\n", code_barre2, produites[i].code_barre);
+
+                printf("ce produit est %s est sont prix est %.2f DA\n", produites[i].nom_de_produit, produites[i].prix);
             }
-            else
+            /*else
             {
                 printf("ce code barre n'existe pas donc le produit meme\n");
-            }
-        }
+            }*/
+        }//for
 
-        return 0;
-    }
+    
+    }// while
+    return 0;
 }
