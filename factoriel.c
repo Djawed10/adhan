@@ -127,3 +127,24 @@ int main()
 
     return 0;
 }
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+   char chaine[] = "Bonjour tout le monde";//code_barre
+   char sous_chaine[] = "tout";//code_barre2
+
+   char *ptr = strstr(chaine, sous_chaine);//char *htr = strstr(code_barre, code_barre2);
+
+   if (ptr != NULL){//if(htr != NULL){
+      printf("La sous-chaine \"%s\" a ete trouvee dans la chaine \"%s\".\n", sous_chaine, chaine);
+   } else {
+      printf("La sous-chaine \"%s\" n'a pas ete trouvee dans la chaine \"%s\".\n", sous_chaine, chaine);
+   }
+
+   return 0;
+}

@@ -1,3 +1,4 @@
 produit code_barre prix
 couscous 22561 150.45
 pepsi 22562 200.35
+coca 56485 100.45
