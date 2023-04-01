@@ -60,9 +60,40 @@ int main()
             {
                 printf("ce code barre n'existe pas donc le produit meme\n");
             }*/
-        }//for
 
-    
-    }// while
+        } // for
+        save_result(produites, produit_count,  result , count_result)
+    }
+
     return 0;
+}
+void save_result(int tab_produits,int  count_produits,int  tab_result,int  count_result)
+{
+    // open file
+    FILE *pt = fopen("result_prdouit.txt", "wt+");
+    if (pt == NULL)
+    {
+        printf("no such file");
+        return 0;
+    }
+    fopen() char html[1000];
+    sprintf(html, "Table</ h2>\n ");
+    fprintf(pf, "<table>\n");
+    fprintf(pf, "<tr>\n");
+    fprintf(pf, "<th>produit</th>\n");
+    fprintf(pf, "<th>code barre</th>\n");
+    fprintf(pf, "<th>prix</th>\n");
+    fprintf(pf, "</tr>\n");
+    for ()
+    {
+
+        fprintf(pf, " <tr>\n");
+        fprintf(pf, "<td> %s </td>\n", produites[i].nom_de_produit);
+        fprintf(pf, "<td> %s </td>\n", produites[i], code_barre);
+        fprintf(pf, "<td> %.2f DA </td>\n", produites[i].prix);
+        fprintf(pf, "</tr>\n");
+    }
+    fprintf(pf, "</table>\n");
+    printf("%s", html);
+    // clos file
 }
